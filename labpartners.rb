@@ -30,18 +30,32 @@ puts "How many groups ?"
 g_num = gets.chomp.to_i
 class_size = students.length
 group = []
-
-while class_size > 0
-      class_size = class_size - g_num
-      if class_size > (g_num * 2)
-            g_num.times do
-            group << students.pop
-      end
-
-      puts group
+i = 0
+students.each do |s|
+  if i < g_num
+      group[i] << s
+      i = i + 1
+  else
+    i = 0
+  end
 end
 
-print "#{group} - group"
+puts students
 
-end
-print "#{students} - students"
+
+
+
+# while class_size > 0
+#       class_size = class_size - g_num
+#       if class_size > (g_num * 2)
+#             g_num.times do
+#             group << students.pop
+#       end
+
+#       puts group
+# end
+
+# print "#{group} - group"
+
+# end
+# print "#{students} - students"
