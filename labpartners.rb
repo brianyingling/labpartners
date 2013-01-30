@@ -64,6 +64,7 @@ remainder = class_size % g_num
 #       start = start + per_group
 #       puts "#{start} - New Start"
 
+
 # end
 
 # puts "#{full} - New Array"
@@ -86,4 +87,3 @@ g_num.times do
 end
 
 puts "#{students.length} - Left in Array"
-
