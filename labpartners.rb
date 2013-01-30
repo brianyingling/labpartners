@@ -28,10 +28,20 @@ students = ['Stephen B',
 
 puts "How many groups ?"
 g_num = gets.chomp.to_i
-
 class_size = students.length
+group = []
 
-i = 0
-g_num.times do |n|
-  print n
+while class_size > 0
+      class_size = class_size - g_num
+      if class_size > (g_num * 2)
+            g_num.times do
+            group << students.pop
+      end
+
+      puts group
 end
+
+print "#{group} - group"
+
+end
+print "#{students} - students"
