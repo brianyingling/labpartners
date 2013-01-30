@@ -29,19 +29,18 @@ students = ['Stephen B',
 puts "How many groups ?"
 g_num = gets.chomp.to_i
 class_size = students.length
-group = []
+per_group = class_size / g_num
+remainder = class_size % g_num
 
-while class_size > 0
-      class_size = class_size - g_num
-      if class_size > (g_num * 2)
-            g_num.times do
-            group << students.pop
+g_num.times do
+      print "GROUP: "
+      per_group.times do
+            print "#{students.pop}, "
       end
-
-      puts group
+      if (remainder > 0) && (students.length <= remainder)
+            remainder.times do
+                  print "#{students.pop}"
+            end
+      end
+      puts " "
 end
-
-print "#{group} - group"
-
-end
-print "#{students} - students"
