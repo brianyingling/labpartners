@@ -25,3 +25,13 @@ students = ['Stephen B',
             'Brian Y',
             'Jill Y'
           ]
+
+puts "How many groups ?"
+g_num = gets.chomp.to_i
+
+class_size = students.length
+
+i = 0
+g_num.times do |n|
+  print n
+end
