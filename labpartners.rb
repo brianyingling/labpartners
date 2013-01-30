@@ -31,6 +31,8 @@ print "How many groups would you like, Chylde? "
 students = students.shuffle
 
 g_num = gets.chomp.to_i
+
+#size of class
 class_size = students.length
 
 per_group = class_size / g_num
@@ -62,7 +64,6 @@ remainder = class_size % g_num
 #       start = start + per_group
 #       puts "#{start} - New Start"
 
-
 # end
 
 # puts "#{full} - New Array"
@@ -76,7 +77,7 @@ g_num.times do
       per_group.times do
             print ": #{students.pop} "
       end
-      if (remainder > 0) && (students.length <= remainder)
+      if (remainder > 0) && (students.length <= remainder)    # if there's a remainder and the length is less than students.length
             remainder.times do
                   print ": #{students.pop}"
             end
